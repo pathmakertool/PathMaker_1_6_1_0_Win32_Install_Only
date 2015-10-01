@@ -1,8 +1,25 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+* text=input
+
+# Denote all files that are truly binary and should not be modified.
+*.deploy binary
+*.manifest binary
+*.application binary
+*.exe binary
+*.htm binary
+*.bas binary
+*.vss binary
+*.vst binary
+*.zip binary
+*.7z binary
 
 # Custom for Visual Studio
 *.cs     diff=csharp
+*.sln    merge=union
+*.csproj merge=union
+*.vbproj merge=union
+*.fsproj merge=union
+*.dbproj merge=union
 
 # Standard to msysgit
 *.doc	 diff=astextplain
